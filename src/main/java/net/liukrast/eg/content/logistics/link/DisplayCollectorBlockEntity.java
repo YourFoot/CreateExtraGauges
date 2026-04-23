@@ -33,7 +33,7 @@ public class DisplayCollectorBlockEntity extends DisplayLinkBlockEntity {
         behaviours.add(factoryPanelSupport = new AbstractPanelSupportBehaviour(this, () -> true, () -> {}) {
             @Override
             public void addConnections(PanelConnectionBuilder builder) {
-                builder.registerOutput(DeployerPanelConnections.STRING, () -> component.getString());
+                builder.registerOutput(DeployerPanelConnections.STRING, () -> getComponent().getString());
             }
         });
     }
