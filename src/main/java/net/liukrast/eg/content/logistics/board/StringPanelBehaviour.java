@@ -98,7 +98,7 @@ public class StringPanelBehaviour extends AbstractPanelBehaviour {
             try {
                 Pattern pattern = Pattern.compile(regex);
                 res = pattern.matcher(res).replaceAll(replacement);
-            } catch (PatternSyntaxException | IllegalArgumentException e) {
+            } catch (IllegalArgumentException e) {
                 res = "RegexError";
             }
         }
