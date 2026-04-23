@@ -101,6 +101,9 @@ public class StringPanelBehaviour extends AbstractPanelBehaviour {
             } catch (PatternSyntaxException e) {
                 res = "RegexError";
             }
+            } catch (IllegalArgumentException e) {
+                res = "ReplaceError";
+            }
         }
         if (res.equals(value))
             return;
