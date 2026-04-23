@@ -98,11 +98,8 @@ public class StringPanelBehaviour extends AbstractPanelBehaviour {
             try {
                 Pattern pattern = Pattern.compile(regex);
                 res = pattern.matcher(res).replaceAll(replacement);
-            } catch (PatternSyntaxException e) {
+            } catch (PatternSyntaxException | IllegalArgumentException e) {
                 res = "RegexError";
-            }
-            } catch (IllegalArgumentException e) {
-                res = "ReplaceError";
             }
         }
         if (res.equals(value))
